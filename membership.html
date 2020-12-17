@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Membership - Liverpool Club</title>
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="./javascript/script.js"></script>
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="icon" type="image/png" href="./assets/lfc-icon.png">
+    </head>
+    
+    <body>
+        <div class="container shadow rounded">
+            <div id="flex-banner">
+                <img id="sc-bank" src="assets/sc-bank.png">
+                <img id="nike" src="assets/nike.png">
+                <img id="axa" src="assets/AXA.png">
+            </div>
+            <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #e31b23;">
+                <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <img id="navbar-icon" src="./assets/lfc-icon.png" onclick="toHome()">
+                <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav ml-5">
+                    <li class="nav-item">
+                      <a class="nav-link" href="index.html">About LFC<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item ml-5">
+                      <a class="nav-link" href="players.html">Players</a>
+                    </li>
+                    <li class="nav-item ml-5">
+                      <a class="nav-link" href="membership.html">Membership</a>
+                    </li>
+                  </ul>
+                </div>
+            </nav>
+                <div id="checkout">
+                <div class="py-5 text-center">
+                  <h2 class="text-danger">Join the Reds!</h2>
+                </div>
+          
+                <div id="checkoutForm" class="row">
+
+                  <div class="col-md-4 order-md-2 mb-4">
+                    <h4 class="d-flex justify-content-between align-items-center mb-3">
+                      <span class="ml-1 text-muted">Cart</span>
+                      <span id="prodQty" class="badge badge-secondary badge-pill">0</span>
+                    </h4>
+                    <ul class="list-group mb-3">
+                      <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                          <h6 class="my-0">Products Price (USD)</h6>
+                        </div>
+                        <span id="prodPrice" class="text-muted">0</span>
+                      </li>
+                      <li class="list-group-item d-flex justify-content-between bg-light">
+                        <div class="text-danger">
+                          <h6 class="my-0">VTC Discount (USD)</h6>
+                          <small>Code: VTC2020</small>
+                        </div>
+                        <span class="text-danger">(50)</span>
+                      </li>
+                      <li class="list-group-item d-flex justify-content-between">
+                        <span>Total (USD)</span>
+                        <strong id="sumOfAll">$0</strong>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="col-md-8 order-md-1">
+                    <form class="needs-validation" method="POST" enctype="multipart/form-data">
+                      <div class="row">
+                        <div class="col-md-6 mb-3">
+                          <input type="text" class="form-control" id="firstName" placeholder="First name" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                          <input type="text" class="form-control" id="lastName" placeholder="Last name" required>
+                        </div>
+                      </div>
+          
+                      <div class="mb-3">
+                        <input type="email" class="form-control" id="email" placeholder="Email Address">
+                      </div>
+          
+                      <div class="row">
+                        <div class="col-md-12 mb-3">
+                          <label for="country">Country</label>
+                          <select class="custom-select d-block w-100" id="country" oninput="hkRegionSelected()" required>
+                            <option>United Kingdom</option>
+                            <option>Hong Kong</option>
+                            <option>United States</option>
+                          </select>
+                        </div>
+                        <div id="hkRegion" class="col-md-12 mb-3">
+                          <label for="state">Region</label>
+                          <select class="custom-select d-block w-100" id="state">
+                            <option>Hong Kong Island</option>
+                            <option>Kowloon</option>
+                            <option>New Territories</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <hr class="mb-4">
+
+                      <h4 class="mb-3">Souvenir (Buy more than $50 to get the VTC discount)</h4>
+                      <div class="custom-control custom-checkbox">
+                        <input id="shirt" type="checkbox" class="custom-control-input" onchange="addShirt()">
+                        <label class="custom-control-label" for="shirt">Liverpool Shirt ($99)</label>
+                      </div>
+                      <div class="custom-control custom-checkbox">
+                        <input id="soccer" type="checkbox" class="custom-control-input" onchange="addSoccer()">
+                        <label class="custom-control-label" for="soccer">Liverpool Soccer ($49)</label>
+                      </div>
+                      <div class="custom-control custom-checkbox">
+                        <input id="magazine" type="checkbox" class="custom-control-input" onchange="addMagazine()">
+                        <label class="custom-control-label" for="magazine">Premier League Champion Megazine ($29)</label>
+                      </div>
+
+                      <hr class="mb-4">
+          
+                      <div class="d-block my-3">
+                        <div class="custom-control custom-radio">
+                          <input id="credit" name="payment" type="radio" class="custom-control-input" checked required>
+                          <label class="custom-control-label" for="credit">Credit card</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                          <input id="debit" name="payment" type="radio" class="custom-control-input" required>
+                          <label class="custom-control-label" for="debit">Debit card</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                          <input id="paypal" name="payment" type="radio" class="custom-control-input" required>
+                          <label class="custom-control-label" for="paypal">Paypal</label>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-md-12 mb-3">
+                          <label for="cc-name">Name on card</label>
+                          <input type="text" class="form-control" id="cc-name" placeholder="" required>
+                          <small class="text-muted">Full name as displayed on card</small>
+                        </div>
+                        <div class="col-md-12 mb-3">
+                          <label for="cc-number">Credit card number</label>
+                          <input type="text" class="form-control" id="cc-number" placeholder="" required>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-12 mb-3">
+                          <label for="cc-expiration">Expiration</label>
+                          <input type="date" class="form-control" id="cc-expiration" required>
+                        </div>
+                        <div class="col-md-12 mb-3">
+                          <label for="cc-expiration">CVV</label>
+                          <input type="password" class="form-control" id="cc-cvv" placeholder="Maximum 3 number" maxlength="3" required>
+                        </div>
+                      </div>
+                      <hr class="mb-4">
+                      <button class="btn btn-danger btn-lg btn-block" type="submit">Continue to checkout</button>
+                    </form>
+                  </div>
+                </div>
+            </div>
+            <footer style="padding-bottom: 20px;" id="footerBottom" class="text-muted text-center text-small">
+                <p id="footerText" class="mb-1">&copy; 2020-2021 Liverpool FC</p>
+            </footer>
+        </div>
+    </body>
+</html>

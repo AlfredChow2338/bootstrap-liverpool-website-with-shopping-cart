@@ -1,0 +1,458 @@
+body {
+    height: 100%;
+    background-image: url('../assets/anfield.png');
+    background-repeat: no-repeat;
+    background-size: 200%;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+#flex-banner {
+    height: 50px;
+    background-color: white;
+    display: flex;
+    flex-wrap: nowrap;
+    text-align: justify;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#sc-bank {
+    width: 80px;
+    height: 80px;
+    margin-top: -12px;
+    margin-left: 50px;
+}
+
+#nike {
+    width: 80px;
+    height: 35px;
+    margin-top: 10px;
+}
+
+#axa {
+    width: 80px;
+    height: 35px;
+    margin-top: 10px;
+    margin-right: 50px;
+}
+
+#navbar-icon {
+    width: 6%;
+    margin-left: 10px;
+    min-width: 50px;
+    cursor:pointer;
+}
+
+.navbar-toggler {
+    display: inline-block;
+}
+
+.space-lfc-red {
+    height: 60px;
+    background-color: #b8161f;
+}
+
+.space-white {
+    height: 30px;
+    background-color: white;
+    margin-bottom: 30px;
+}
+
+/* #lfc-banner {
+    width: 100%;
+    height: 600px;
+    background-attachment: fixed;
+} */
+
+/* #banner-btn-left {
+    position: absolute;
+    margin-top: 250px;
+    margin-left: -30px;
+    width: 50px;
+    height: 100px;
+    background-color: #b8161f;
+    border: none;
+    color: white;
+    font-size: 170%;
+    cursor:pointer;
+}
+
+#banner-btn-right {
+    position: absolute;
+    margin-top: 250px;
+    margin-left: -30px;
+    width: 50px;
+    height: 100px;
+    background-color: #b8161f;
+    border: none;
+    color: white;
+    font-size: 170%;
+    cursor:pointer;
+} */
+
+#card-text {
+    /* position: absolute; */
+    /* z-index: 1; */
+    margin-top: -50px;
+}
+
+.card-header {
+    color: white;
+    background-color: #b8161f !important;
+}
+
+#quoteText {
+    font-size: 80%;
+}
+
+#location-title {
+    font-size: 120%;
+    color: white;
+    margin-left: 20px;
+    margin-top: 20px;
+    padding-top: 20px;
+}
+
+#map {
+    width: 100%;
+    height: 500px;
+    padding: 0px 0px 20px 0px;
+    border: none;
+}
+
+#trophies {
+    width: 100%;
+}
+
+#subscribe-form {
+    background-color: #ebebeb;
+    color: #333333;
+    height: 250px;
+}
+
+#subscribe-form h3 {
+    font-weight: lighter;
+    text-align: center;
+    padding-top: 20px;
+}
+
+form {
+    margin: auto;
+    margin-top: 20px;
+    width: 60%;
+}
+
+#checkoutForm {
+    padding-right: 50px;
+}
+
+#subBtn {
+    width: 100% !important;
+}
+
+#footerBottom {
+    background-color: #ebebeb;
+    padding-right: 30px;
+    padding-top: 30px;
+}
+
+#checkout {
+    background-color: #ebebeb;
+}
+
+#hkRegion {
+    display: none;
+}
+
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before{
+    background-color:red;
+}
+
+.custom-radio .custom-control-input:checked~.custom-control-label::before,
+.custom-radio .custom-control-input:checked~.custom-control-label::after {
+    background-color: red;
+    border-radius: 50%;
+}
+
+
+.grid {
+	position: relative;
+	margin: 0 auto;
+	padding: 1em 0 4em;
+	max-width: 1000px;
+	list-style: none;
+    text-align: center;
+}
+
+/* Common style */
+.grid figure {
+	position: relative;
+	float: left;
+	overflow: hidden;
+	margin: 10px 1%;
+	min-width: 320px;
+	max-width: 480px;
+	max-height: 360px;
+	width: 48%;
+	background: #3085a3;
+	text-align: center;
+	cursor: pointer;
+}
+
+.grid figure img {
+	position: relative;
+	display: block;
+	min-height: 100%;
+	max-width: 100%;
+	opacity: 0.8;
+}
+
+.grid figure figcaption {
+	padding: 2em;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 1.25em;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.grid figure figcaption::before,
+.grid figure figcaption::after {
+	pointer-events: none;
+}
+
+.grid figure figcaption,
+.grid figure figcaption > a {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.grid figure figcaption > a {
+	z-index: 1000;
+	text-indent: 200%;
+	white-space: nowrap;
+	font-size: 0;
+	opacity: 0;
+}
+
+.grid figure h2 {
+	word-spacing: -0.15em;
+	font-weight: 300;
+}
+
+.grid figure h2 span {
+	font-weight: 800;
+}
+
+.grid figure h2,
+.grid figure p {
+	margin: 0;
+}
+
+.grid figure p {
+	letter-spacing: 1px;
+	font-size: 68.5%;
+}
+
+figure.effect-lily img {
+	max-width: none;
+	width: -webkit-calc(100% + 50px);
+	width: calc(100% + 50px);
+	opacity: 0.7;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: translate3d(-40px,0, 0);
+	transform: translate3d(-40px,0,0);
+}
+
+figure.effect-lily figcaption {
+	text-align: left;
+}
+
+figure.effect-lily figcaption > div {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	padding: 2em;
+	width: 100%;
+	height: 50%;
+}
+
+figure.effect-lily h2,
+figure.effect-lily p {
+	-webkit-transform: translate3d(0,40px,0);
+	transform: translate3d(0,40px,0);
+}
+
+figure.effect-lily h2 {
+	-webkit-transition: -webkit-transform 0.35s;
+	transition: transform 0.35s;
+}
+
+figure.effect-lily p {
+	color: rgba(255,255,255,0.8);
+	opacity: 0;
+	-webkit-transition: opacity 0.2s, -webkit-transform 0.35s;
+	transition: opacity 0.2s, transform 0.35s;
+}
+
+figure.effect-lily:hover img,
+figure.effect-lily:hover p {
+	opacity: 1;
+}
+
+figure.effect-lily:hover img,
+figure.effect-lily:hover h2,
+figure.effect-lily:hover p {
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+figure.effect-lily:hover p {
+	-webkit-transition-delay: 0.05s;
+	transition-delay: 0.05s;
+	-webkit-transition-duration: 0.35s;
+	transition-duration: 0.35s;
+}
+
+@media only screen and (max-width: 992px) {
+    /* #lfc-banner {  
+        height: 400px;
+    } */
+
+    #banner-btn-left {
+        margin-top: 150px;
+    }
+
+    #banner-btn-right {
+        margin-top: 150px;
+    }
+
+    .grid figure h2,
+    .grid figure p {
+        font-size: 80%;
+        margin-top: -5px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    body {        
+        background-size: 300%;
+    }
+
+    .grid figure {
+		display: inline-block;
+		float: none;
+		margin: 10px auto;
+		width: 100%;
+    }
+    
+    .grid figure h2,
+    .grid figure p {
+        font-size: 100%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    /* #lfc-banner {  
+        height: 300px;
+    } */
+
+    #banner-btn-left {
+        margin-top: 80px;
+    }
+
+    #banner-btn-right {
+        margin-top: 80px;
+    }
+
+    #checkoutForm {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    body {        
+        background-size: 500%;
+    }
+
+    #flex-banner {
+        display: none;
+    }
+
+    #flex-banner img {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    /* #lfc-banner {  
+        height: 200px;
+    } */
+
+    #banner-btn-left {
+        margin-top: 40px;
+    }
+
+    #banner-btn-right {
+        margin-top: 40px;
+    }
+
+    footer {
+        margin-top: -10px;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    body {        
+        background-size: 750%;
+    }
+
+    footer {
+        padding-right: 10px;
+    }
+}
+
+@media only screen and (max-width: 258px) {
+    #location-title {
+        font-size: 100%;
+    }
+}
+
+@media only screen and (max-width: 253px) {
+    #footerText {
+        font-size: 90%;
+    }
+}
+
+@media only screen and (max-width: 250px) {
+    /* #lfc-banner {  
+        height: 150px;
+    } */
+
+    #banner-btn-left {
+        margin-top: 20px;
+    }
+
+    #banner-btn-right {
+        margin-top: 20px;
+    }
+}
+
+@media only screen and (max-width: 225px) {
+    body {        
+        background-size: 1000%;
+    }
+}
+
+@media only screen and (max-width: 180px) {
+    #navbar-icon {
+        display: none;
+    }
+}

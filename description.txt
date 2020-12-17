@@ -1,0 +1,46 @@
+ITE3006 Information Technology Essential - Web EA Project Assignment  
+Video Link: https://youtu.be/vMd2T_aYaJk
+
+1. General
+This website is to promote a great British soccer club, the former Premier League Champion Liverpool LFC.
+
+1.1 Background Image
+The background image is Anfield Stadium, Liverpool's home stadium for all competition. To make the background responsive, media query is used to resize the image for different window size.
+
+
+1.2 Menu bar
+The bar is on top of all pages. It consists of 3 items, "About LFC", "Players" and "Membership". The responsive menu bar will be changed to an menu icon when the width becomes smaller than 480px.
+
+1.3 Footer
+It contains the copyright message.
+
+
+2. About LFC (Index page)
+This page consist of three parts, "Club News", "Google Map Location" and "Subscribe to Letter".
+
+2.1 Club News
+This is a responsive carousell banner. Banner can be changed manually and automatically every 5 seconds.  It contains a big banner image, a news title, a short description and the source.
+
+2.2 Google Map Location
+This is a map showing the location of Liverpool's home stadium, Anfield Stadium. Instead of using Google Map APIs, I found a useful tools called My Google Map to create this iframe. The iframe is zoomable and works like Google Map APIs. It does not require authentication keys.
+
+2.3 Subscribe to Letter
+Under the map, a form for visitors who are interested in the club to subscribe to Liverpool's newsletter. The form inputs are validated by rules and types.
+
+
+3. Players
+3.1 Embedded Youtube video
+A embedded iframe to introduce the most recently signing of Liverpool, Diogo Jota.
+
+3.2 Players Cards
+This page shows the players' information such as their names, ages, nationality and their best position. The cards have some modern design hover effects. When hovering the cards, more information will be pop up.
+
+
+4. Membership
+This page is for users who are interested in joining our membership.
+
+4.1 Form
+All inputs are validated by specific type. Users can choose to buy souvenir with a VTC discount. If the purchase amount is more than $50, the discount will automatically apply to the order. 
+
+4.2 Shopping Cart
+When souvenirs are added into the carts, it will sum up the amount immediately and apply the VTC discount when the sum is over $50.
